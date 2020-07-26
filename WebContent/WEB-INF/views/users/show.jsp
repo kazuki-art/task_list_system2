@@ -18,6 +18,15 @@
                             <th>メールアドレス</th>
                             <td><c:out value="${user.mailaddress}" /></td>
                         </tr>
+                        <tr>
+                            <th>権限</th>
+                            <td>
+                                <c:choose>
+                                    <c:when test="${user.admin_flag == 1}">管理者</c:when>
+                                    <c:otherwise>一般</c:otherwise>
+                                </c:choose>
+                            </td>
+                        </tr>
 
 
                     </tbody>

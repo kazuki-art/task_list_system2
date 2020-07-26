@@ -51,6 +51,8 @@ public class UsersCreateServlet extends HttpServlet {
                             (String)this.getServletContext().getAttribute("salt")
                             )
                     );
+            e.setAdmin_flag(Integer.parseInt(request.getParameter("admin_flag")));
+            e.setDelete_flag(0);
 
 
 

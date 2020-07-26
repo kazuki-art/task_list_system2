@@ -22,15 +22,14 @@
                         <td><c:out value="${user.mailaddress}" /></td>
 
                         <td>
-                           <c:when test="${user.delete_flag == 1}">
+                            <c:choose>
+                                <c:when test="${user.delete_flag == 1}">
                                     （削除済み）
                                 </c:when>
-
-
-
+                                <c:otherwise>
                                     <a href="<c:url value='/users/show?id=${user.id}' />">詳細を表示</a>
-
-
+                                </c:otherwise>
+                            </c:choose>
                         </td>
                     </tr>
                 </c:forEach>

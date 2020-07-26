@@ -51,6 +51,9 @@ public class User {
     private Integer delete_flag;
 
 
+
+
+
     public Integer getId() {
         return id;
     }
@@ -98,6 +101,8 @@ public class User {
     public void setDelete_flag(Integer delete_flag) {
         this.delete_flag = delete_flag;
     }
+
+
 
 
 }
