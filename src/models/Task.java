@@ -22,6 +22,14 @@ import javax.persistence.Table;
             name = "getTasksCount",
             query = "SELECT COUNT(r) FROM Task AS r"
             ),
+    @NamedQuery(
+            name = "getMyAllTasks",
+            query = "SELECT r FROM Task AS r WHERE r.user = :user ORDER BY r.id DESC"
+            ),
+    @NamedQuery(
+            name = "getMyTasksCount",
+            query = "SELECT COUNT(r) FROM Task AS r WHERE r.user = :user"
+            )
 })
 @Entity
 public class Task {
