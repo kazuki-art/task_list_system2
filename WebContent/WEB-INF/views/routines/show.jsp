@@ -5,7 +5,7 @@
     <c:param name="content">
         <c:choose>
             <c:when test="${routine != null}">
-                <h2>タスク 詳細ページ</h2>
+                <h2>ルーティン 詳細ページ</h2>
 
                 <table>
                     <tbody>

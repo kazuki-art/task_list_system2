@@ -24,6 +24,14 @@ import javax.persistence.Table;
             name = "getRoutinesCount",
             query = "SELECT COUNT(r) FROM Routine AS r"
             ),
+    @NamedQuery(
+            name = "getMyAllRoutines",
+            query = "SELECT r FROM Routine AS r WHERE r.user = :user ORDER BY r.id DESC"
+            ),
+    @NamedQuery(
+            name = "getMyRoutinesCount",
+            query = "SELECT COUNT(r) FROM Routine AS r WHERE r.user = :user"
+            )
 })
 
 @Entity
